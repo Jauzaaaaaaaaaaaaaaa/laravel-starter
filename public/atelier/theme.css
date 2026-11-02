@@ -1,0 +1,28 @@
+/* LARAVEL STARTER: cetak biru. Latar merah Laravel, garis putih, kop gambar teknik. */
+:root { --rd: #d7372a; --rd2: #b42a1f; --wh: #fff4ef; --ln: rgba(255, 244, 239, .24); --at-accent: #d7372a; --at-on-accent: #fff; --at-deep: #8f1f16; --at-mono: "Red Hat Mono", monospace; }
+html { background: var(--rd); }
+body, body.at { margin: 0; min-height: 100svh; display: flex; flex-direction: column; font-family: "Red Hat Mono", monospace; color: var(--wh); background-image: linear-gradient(var(--ln) 1px, transparent 1px), linear-gradient(90deg, var(--ln) 1px, transparent 1px), linear-gradient(rgba(255,244,239,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,244,239,.08) 1px, transparent 1px); background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px; }
+a { color: inherit !important; }
+.at-curtain__a, .at-curtain__b { border-radius: 0; inset: 0; }
+.at-curtain__cap { color: #fff; }
+.st-plan { width: min(70vw, 320px); color: #fff; }
+.st-plan path { fill: none; stroke: currentColor; stroke-width: 2; stroke-dasharray: 1; stroke-dashoffset: 1; animation: st-draw 1.2s var(--at-ease) forwards; }
+.st-plan .thin { stroke-width: 1; animation-delay: .35s; }
+@keyframes st-draw { to { stroke-dashoffset: 0; } }
+.st-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 16px clamp(16px, 4vw, 48px); font-size: .78rem; border-bottom: 1px solid var(--wh); background: var(--rd); }
+.st-main { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 20px; padding: 110px clamp(16px, 4vw, 48px) clamp(20px, 5vh, 48px); }
+.st-note { margin: 0; font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; }
+h1 { margin: 0; max-width: 13ch; font-family: "Red Hat Display", sans-serif; font-weight: 900; font-size: clamp(3rem, 11vw, 10rem); line-height: .92; letter-spacing: -.045em; }
+h1 em { font-style: normal; color: var(--rd); -webkit-text-stroke: 2px var(--wh); }
+.st-lead { margin: 0; max-width: 52ch; }
+.st-specs { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--wh); }
+.st-specs > div { padding: 14px 16px; }
+.st-specs > div + div { border-left: 1px solid var(--wh); }
+.st-specs span { display: block; font-size: .7rem; opacity: .8; }
+.st-specs b { font-family: "Red Hat Display", sans-serif; font-size: clamp(1rem, 2vw, 1.5rem); }
+.st-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--wh); }
+.st-links a { display: flex; gap: 12px; padding: 16px; text-decoration: none; font-weight: 500; transition: background-color .25s, color .25s; }
+.st-links a + a { border-left: 1px solid var(--wh); }
+.st-links a:hover { background: var(--wh); color: var(--rd) !important; }
+.st-links span { opacity: .65; }
+@media (max-width: 760px) { .st-specs, .st-links { grid-template-columns: 1fr; } .st-specs > div + div, .st-links a + a { border-left: 0; border-top: 1px solid var(--wh); } }
